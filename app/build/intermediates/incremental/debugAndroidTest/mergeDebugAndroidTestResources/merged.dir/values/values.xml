@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="app_id">2386079</integer>
+    <string name="app_sign" translatable="false">b2f34b82d905f322ccf6ea5e8c8e7efc7724de85bf4a9f7ac24cc903bdde063f</string>
+    <style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style>
+    <style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style>
+</resources>

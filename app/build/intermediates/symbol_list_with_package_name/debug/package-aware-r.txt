@@ -3007,6 +3007,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_language_24
 drawable baseline_person_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3089,9 +3090,12 @@ drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_home
 drawable ic_keyboard_black_24dp
+drawable ic_language
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_logout
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -3121,6 +3125,8 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable message_bg_received
+drawable message_bg_sent
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3324,6 +3330,7 @@ id bestChoice
 id blocking
 id bottom
 id bottom_menu_bar
+id bottom_navigation
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3359,6 +3366,8 @@ id center_vertical
 id chain
 id chain2
 id chains
+id chatBtn
+id chatRecyclerView
 id chat_recv_icon
 id chat_recv_message
 id chat_recv_message_layout
@@ -3385,6 +3394,8 @@ id clockwise
 id closest
 id collapseActionView
 id compress
+id confirmPasswordET
+id confirmPasswordLayout
 id confirm_button
 id constraint
 id constraint_layout
@@ -3533,6 +3544,7 @@ id list_item_image
 id list_item_user_id
 id list_item_user_name
 id login
+id loginLink
 id m3_side_sheet
 id mailIdEt
 id mailIdLayout
@@ -3570,7 +3582,11 @@ id memberlist_down
 id memberlist_layout
 id memberlist_title
 id message
+id messageInput
+id messageInputLayout
 id messageText
+id messageTextView
+id messageTextViewSent
 id middle
 id mini
 id mini_view_audio_parent
@@ -3610,6 +3626,9 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_home
+id nav_language
+id nav_logout
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3709,6 +3728,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id sendButton
 id send_message
 id sharedValueSet
 id sharedValueUnset
@@ -3717,6 +3737,7 @@ id showCustom
 id showHome
 id showTitle
 id signUp
+id signUpLink
 id sin
 id skipCollapsed
 id skipped
@@ -3948,8 +3969,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_chat
 layout activity_login
 layout activity_main
+layout activity_sign_up
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout call_activity_prebuilt
@@ -3980,6 +4003,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_message
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4052,6 +4076,7 @@ layout zego_uikit_item_inroom_message
 layout zego_uikit_layout_fixed
 layout zego_uikit_layout_message_input
 layout zego_uikit_layout_pip
+menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -4085,6 +4110,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string already_have_account
 string androidx_startup
 string app_name
 string app_sign
@@ -4104,9 +4130,11 @@ string call_notification_ongoing_text
 string call_notification_screening_text
 string call_page_action_accept
 string call_page_action_decline
+string change_language
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string chat
 string clear_text_end_icon_content_description
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -4126,7 +4154,10 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string confirm_password
 string copy_toast_msg
+string dont_have_account
+string email
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -4142,8 +4173,11 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
+string home
 string icon_content_description
 string item_view_role_description
+string login
+string logout
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -4244,6 +4278,7 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -4261,9 +4296,15 @@ string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string send
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
+string signup
 string status_bar_notification_info_overflow
+string type_a_message
+string user_name
+string video_call
+string voice_call
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

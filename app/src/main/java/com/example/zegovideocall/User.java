@@ -1,14 +1,17 @@
 package com.example.zegovideocall;
 
 public class User {
-    String userName, userID;
+    private String userID;
+    private String userName;
+    private String email;
 
-    public User() {
-
-    }
-
+    // Getters and Setters
     public String getUserID() {
         return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public String getUserName() {
@@ -19,7 +22,11 @@ public class User {
         this.userName = userName;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

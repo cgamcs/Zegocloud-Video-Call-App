@@ -47,6 +47,17 @@
             android:layout_height="40sp"
             android:id="@+id/videoCallBtn"/>
 
+        <TextView
+            android:id="@+id/chatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="?attr/colorPrimary"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp" />
+
     </LinearLayout>
 
 </LinearLayout>

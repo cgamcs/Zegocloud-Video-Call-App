@@ -1,0 +1,5 @@
+com.example.zegovideocall.test
+integer app_id
+string app_sign
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

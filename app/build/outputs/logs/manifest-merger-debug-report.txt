@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:3.9.2] C:\Users\garci\.gradle\caches\transforms-3\03c0644ec2d756e46303f2b686615422\transformed\zego_uikit_prebuilt_call_android-3.9.2\AndroidManifest.xml:2:1-46:12
 MERGED from [com.github.ZEGOCLOUD:zego_uikit_android:3.5.8] C:\Users\garci\.gradle\caches\transforms-3\939d987d84172ce7e4dce48503739d4b\transformed\zego_uikit_android-3.5.8\AndroidManifest.xml:2:1-28:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\garci\.gradle\caches\transforms-3\2e48fac3cbbc88a2f71a6706e3028234\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
@@ -101,8 +101,8 @@ MERGED from [com.elvishew:xlog:1.10.1] C:\Users\garci\.gradle\caches\transforms-
 	xmlns:android
 		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:5:5-27:19
-INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:5:5-27:19
+ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:5:5-33:19
+INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:5:5-33:19
 MERGED from [com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:3.9.2] C:\Users\garci\.gradle\caches\transforms-3\03c0644ec2d756e46303f2b686615422\transformed\zego_uikit_prebuilt_call_android-3.9.2\AndroidManifest.xml:15:5-44:19
 MERGED from [com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:3.9.2] C:\Users\garci\.gradle\caches\transforms-3\03c0644ec2d756e46303f2b686615422\transformed\zego_uikit_prebuilt_call_android-3.9.2\AndroidManifest.xml:15:5-44:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\garci\.gradle\caches\transforms-3\2e48fac3cbbc88a2f71a6706e3028234\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
@@ -193,28 +193,40 @@ MERGED from [im.zego:express-video:3.20.5] C:\Users\garci\.gradle\caches\transfo
 		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:13:9-51
 	android:dataExtractionRules
 		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.zegovideocall.LoginActivity
+activity#com.example.zegovideocall.ChatActivity
 ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
 		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:16:13-42
-activity#com.example.zegovideocall.MainActivity
-ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:18:9-26:20
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:16:13-41
+activity#com.example.zegovideocall.SignUpActivity
+ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:18:9-20:40
 	android:exported
-		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:19:13-41
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:19:13-43
+activity#com.example.zegovideocall.LoginActivity
+ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:21:9-23:40
+	android:exported
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:23:13-37
+	android:name
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:22:13-42
+activity#com.example.zegovideocall.MainActivity
+ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:24:9-32:20
+	android:exported
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:26:13-36
+	android:name
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:25:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:30:27-74
 uses-sdk
 INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml
@@ -574,7 +586,7 @@ ADDED from [com.github.ZEGOCLOUD:zego_uikit_android:3.5.8] C:\Users\garci\.gradl
 	android:name
 		ADDED from [com.github.ZEGOCLOUD:zego_uikit_android:3.5.8] C:\Users\garci\.gradle\caches\transforms-3\939d987d84172ce7e4dce48503739d4b\transformed\zego_uikit_android-3.5.8\AndroidManifest.xml:26:19-67
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-28:12 reason: com.zegocloud.uikit requested WRITE_EXTERNAL_STORAGE
+IMPLIED from D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\src\main\AndroidManifest.xml:2:1-34:12 reason: com.zegocloud.uikit requested WRITE_EXTERNAL_STORAGE
 uses-permission#android.permission.GET_TASKS
 ADDED from [com.github.ZEGOCLOUD:zego_uikit_signaling_plugin_android:2.9.9] C:\Users\garci\.gradle\caches\transforms-3\7c57cbdb7ea3e93f099735d911eb2b91\transformed\zego_uikit_signaling_plugin_android-2.9.9\AndroidManifest.xml:11:5-68
 MERGED from [im.zego:zpns:2.7.0] C:\Users\garci\.gradle\caches\transforms-3\3bd9c00e5d1800d49a685ad16d2c71af\transformed\zpns-2.7.0\AndroidManifest.xml:14:5-68

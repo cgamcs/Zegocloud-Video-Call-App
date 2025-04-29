@@ -1,0 +1,4 @@
+com.example.zegovideocall.test:style/WhiteBackgroundTheme = 0x7f030001
+com.example.zegovideocall.test:style/WhiteBackgroundDialogTheme = 0x7f030000
+com.example.zegovideocall.test:string/app_sign = 0x7f020000
+com.example.zegovideocall.test:integer/app_id = 0x7f010000

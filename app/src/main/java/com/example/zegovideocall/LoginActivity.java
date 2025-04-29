@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -15,8 +16,12 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Objects;
 
@@ -28,43 +33,66 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("usersList");
 
         TextInputLayout userNameLayout = findViewById(R.id.userNameLayout);
-        TextInputLayout mailLayout = findViewById(R.id.mailIdLayout);
         TextInputLayout passwordLayout = findViewById(R.id.passwordLayout);
 
         TextInputEditText userNameET = findViewById(R.id.userNameET);
-        TextInputEditText mailIdET = findViewById(R.id.mailIdEt);
         TextInputEditText passwordET = findViewById(R.id.passwordET);
 
         MaterialButton login = findViewById(R.id.login);
-        MaterialButton signUp = findViewById(R.id.signUp);
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("usersList");
+        TextView signUpLink = findViewById(R.id.signUpLink);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Objects.requireNonNull(userNameET.getText()).toString().isEmpty()) {
+                String userName = Objects.requireNonNull(userNameET.getText()).toString();
+                String password = Objects.requireNonNull(passwordET.getText()).toString();
+
+                if (userName.isEmpty()) {
                     userNameLayout.setError("Please enter your user name");
-                } else if (Objects.requireNonNull(mailIdET.getText()).toString().isEmpty()) {
-                    mailLayout.setError("Please enter your mail ID");
-                } else if (Objects.requireNonNull(passwordET.getText()).toString().isEmpty()) {
+                } else if (password.isEmpty()) {
                     passwordLayout.setError("Please enter your password");
                 } else {
-                    auth.signInWithEmailAndPassword(mailIdET.getText().toString(), passwordET.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                    reference.orderByChild("userName").equalTo(userName).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
-                        public void onSuccess(AuthResult authResult) {
-                            Toast.makeText(LoginActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()) {
+                                for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                                    User user = userSnapshot.getValue(User.class);
+                                    if (user != null) {
+                                        String email = user.getEmail();
+                                        auth.signInWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                            @Override
+                                            public void onSuccess(AuthResult authResult) {
+                                                FirebaseUser firebaseUser = auth.getCurrentUser();
+                                                if (firebaseUser != null && firebaseUser.isEmailVerified()) {
+                                                    Toast.makeText(LoginActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                            finish();
+                                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                                    startActivity(intent);
+                                                    finish();
+                                                } else {
+                                                    Toast.makeText(LoginActivity.this, "Please verify your email address", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        }).addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(LoginActivity.this, "Failed to login", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                                    }
+                                }
+                            } else {
+                                Toast.makeText(LoginActivity.this, "User not found", Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }).addOnFailureListener(new OnFailureListener() {
+
                         @Override
-                        public void onFailure(@NonNull Exception e) {
+                        public void onCancelled(@NonNull DatabaseError error) {
                             Toast.makeText(LoginActivity.this, "Failed to login", Toast.LENGTH_SHORT).show();
                         }
                     });
@@ -72,47 +100,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        signUpLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Objects.requireNonNull(userNameET.getText()).toString().isEmpty()) {
-                    userNameLayout.setError("Please enter your user name");
-                } else if (Objects.requireNonNull(mailIdET.getText()).toString().isEmpty()) {
-                    mailLayout.setError("Please enter your mail ID");
-                } else if (Objects.requireNonNull(passwordET.getText()).toString().isEmpty()) {
-                    passwordLayout.setError("Please enter your password");
-                } else {
-                    auth.createUserWithEmailAndPassword(mailIdET.getText().toString(), passwordET.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                        @Override
-                        public void onSuccess(AuthResult authResult) {
-                            User user = new User();
-                            user.setUserName(userNameET.getText().toString());
-                            user.setUserID(Objects.requireNonNull(authResult.getUser()).getUid());
-
-                            reference.child(user.getUserID()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void unused) {
-                                    Toast.makeText(LoginActivity.this, "User created successfully!", Toast.LENGTH_SHORT).show();
-
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                    startActivity(intent);
-                                    finish();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(LoginActivity.this, "Failed to create user", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(LoginActivity.this, "Failed to create user", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
     }

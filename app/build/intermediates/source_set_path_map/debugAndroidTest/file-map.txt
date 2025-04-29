@@ -1,0 +1,6 @@
+com.example.zegovideocall.test.app-annotation-experimental-1.3.0-0 C:\Users\garci\.gradle\caches\transforms-3\c6c98d4e904c731fcc437c3bc70e4763\transformed\annotation-experimental-1.3.0\res
+com.example.zegovideocall.test.app-core-1.5.0-1 C:\Users\garci\.gradle\caches\transforms-3\e2806648331f041c1a4e64c2620c1574\transformed\core-1.5.0\res
+com.example.zegovideocall.test.app-androidTest-2 D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\build\generated\res\resValues\androidTest\debug
+com.example.zegovideocall.test.app-mergeDebugAndroidTestResources-3 D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.zegovideocall.test.app-mergeDebugAndroidTestResources-4 D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.zegovideocall.test.app-merged_res-5 D:\Usuarios\garci\Descargas\Zegocloud-Video-Call-App-Example-main\app\build\intermediates\merged_res\debugAndroidTest

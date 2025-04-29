@@ -3,14 +3,30 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <integer name="app_id">2386079</integer>
+    <string name="already_have_account">Already have an account? Login</string>
     <string name="app_name">Zego Video Call</string>
     <string name="app_sign" translatable="false">b2f34b82d905f322ccf6ea5e8c8e7efc7724de85bf4a9f7ac24cc903bdde063f</string>
+    <string name="change_language">Change Language</string>
+    <string name="chat">Chat</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="dont_have_account">Don´t have an account? Sign Up</string>
+    <string name="email">Email</string>
     <string name="gcm_defaultSenderId" translatable="false">94822776118</string>
     <string name="google_api_key" translatable="false">AIzaSyCqtRS0MuRyswudC6fxMXXBYfPM0BXRHKU</string>
     <string name="google_app_id" translatable="false">1:94822776118:android:67a5424e6da8abdfad8797</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCqtRS0MuRyswudC6fxMXXBYfPM0BXRHKU</string>
     <string name="google_storage_bucket" translatable="false">zego-video-call-af7af.firebasestorage.app</string>
+    <string name="home">Home</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="password">Password</string>
     <string name="project_id" translatable="false">zego-video-call-af7af</string>
+    <string name="send">Send</string>
+    <string name="signup">Sign Up</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="user_name">User Name</string>
+    <string name="video_call">Video Call</string>
+    <string name="voice_call">Voice Call</string>
     <style name="Base.Theme.ZegoVideoCall" parent="Theme.Material3.DayNight.NoActionBar">
         
         

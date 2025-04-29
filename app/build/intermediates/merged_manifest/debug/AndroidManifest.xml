@@ -58,6 +58,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.ZegoVideoCall" >
         <activity
+            android:name="com.example.zegovideocall.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.zegovideocall.SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.zegovideocall.LoginActivity"
             android:exported="false" />
         <activity

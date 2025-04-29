@@ -6,12 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,6 +37,7 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.function.Consumer;
 
@@ -49,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         TextView userNameTV = findViewById(R.id.userNameTV);
         RecyclerView recyclerView = findViewById(R.id.recycler);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         setSupportActionBar(toolbar);
 
@@ -97,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
                             ZegoSendCallInvitationButton voiceCallBtn = view.findViewById(R.id.voiceCallBtn);
                             ZegoSendCallInvitationButton videoCallBtn = view.findViewById(R.id.videoCallBtn);
+                            TextView chatBtn = view.findViewById(R.id.chatBtn);
 
                             voiceCallBtn.setIsVideoCall(false);
                             voiceCallBtn.setType(ZegoInvitationType.VOICE_CALL);
@@ -107,6 +113,16 @@ public class MainActivity extends AppCompatActivity {
                             videoCallBtn.setType(ZegoInvitationType.VIDEO_CALL);
                             videoCallBtn.setResourceID("zego_uikit_call");
                             videoCallBtn.setInvitees(Collections.singletonList(new ZegoUIKitUser(user.getUserID(), user.getUserName())));
+
+                            chatBtn.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+                                    intent.putExtra("receiverId", user.getUserID());
+                                    intent.putExtra("receiverName", user.getUserName());
+                                    startActivity(intent);
+                                }
+                            });
 
                             userNameTV.setText(MessageFormat.format("User Name: {0}", user.getUserName()));
                             userIdTV.setText(MessageFormat.format("User ID: {0}", user.getUserID()));
@@ -134,5 +150,43 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
         }
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.nav_home) {
+                    // Handle home action
+                    return true;
+                } else if (item.getItemId() == R.id.nav_logout) {
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    finish();
+                    return true;
+                } else if (item.getItemId() == R.id.nav_language) {
+                    changeLanguage();
+                    return true;
+                }
+                return false;
+            }
+        });
+    }
+
+    private void changeLanguage() {
+        Configuration config = getResources().getConfiguration();
+        Locale currentLocale = config.getLocales().get(0);
+        Locale newLocale;
+
+        if (currentLocale.getLanguage().equals("es")) {
+            newLocale = new Locale("en"); // Cambiar a inglés
+        } else {
+            newLocale = new Locale("es"); // Cambiar a español
+        }
+
+        Locale.setDefault(newLocale);
+        config.setLocale(newLocale);
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+
+        // Recargar la actividad para aplicar los cambios
+        recreate();
     }
 }

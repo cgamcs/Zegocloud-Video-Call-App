@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zego Video Call</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="change_language">Change Language</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="dont_have_account">Don´t have an account? Sign Up</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="voice_call">Voice Call</string>
+    <string name="video_call">Video Call</string>
+    <string name="chat">Chat</string>
+    <string name="send">Send</string>
+    <string name="type_a_message">Type a message</string>
+</resources>

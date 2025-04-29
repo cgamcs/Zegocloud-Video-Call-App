@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.zegovideocall.test.app-mergeDebugAndroidTestResources-3:/values/values.xml",
+            "map": [
+                {
+                    "source": "D:\\Usuarios\\garci\\Descargas\\Zegocloud-Video-Call-App-Example-main\\app\\build\\generated\\res\\resValues\\androidTest\\debug\\values\\gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "159,246",
+                        "endColumns": "44,122",
+                        "endOffsets": "199,364"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,100",
+                        "endColumns": "44,122",
+                        "endOffsets": "95,218"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\garci\\.gradle\\caches\\transforms-3\\e2806648331f041c1a4e64c2620c1574\\transformed\\core-1.5.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "4,11",
+                        "startColumns": "0,0",
+                        "startOffsets": "176,544",
+                        "endLines": "10,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "543,909"
+                    },
+                    "to": {
+                        "startLines": "4,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "223,595",
+                        "endLines": "10,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "590,960"
+                    }
+                }
+            ]
+        }
+    ]
+}
