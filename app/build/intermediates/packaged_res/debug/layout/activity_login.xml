@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10sp"
+    tools:context=".LoginActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0sp"
+        app:boxStrokeWidthFocused="0sp"
+        app:boxCornerRadiusBottomEnd="16sp"
+        app:boxCornerRadiusBottomStart="16sp"
+        app:boxCornerRadiusTopEnd="16sp"
+        app:boxCornerRadiusTopStart="16sp"
+        android:hint="User Name"
+        android:id="@+id/userNameLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userNameET"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0sp"
+        app:boxStrokeWidthFocused="0sp"
+        app:boxCornerRadiusBottomEnd="16sp"
+        app:boxCornerRadiusBottomStart="16sp"
+        app:boxCornerRadiusTopEnd="16sp"
+        app:boxCornerRadiusTopStart="16sp"
+        android:hint="Mail ID"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:id="@+id/mailIdLayout"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mailIdEt"
+            android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0sp"
+        app:boxStrokeWidthFocused="0sp"
+        app:boxCornerRadiusBottomEnd="16sp"
+        app:boxCornerRadiusBottomStart="16sp"
+        app:boxCornerRadiusTopEnd="16sp"
+        app:boxCornerRadiusTopStart="16sp"
+        android:hint="Password"
+        android:id="@+id/passwordLayout"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordET"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:text="Login"
+        android:id="@+id/login"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:id="@+id/signUp"/>
+
+</LinearLayout>

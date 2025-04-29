@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "94822776118",
+    "project_id": "zego-video-call-af7af",
+    "storage_bucket": "zego-video-call-af7af.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94822776118:android:67a5424e6da8abdfad8797",
+        "android_client_info": {
+          "package_name": "com.example.zegovideocall"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqtRS0MuRyswudC6fxMXXBYfPM0BXRHKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
